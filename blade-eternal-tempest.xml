@@ -1,1 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <name>Homebrew Legendary Items</name>
+    <update version="1.0" />
+  </info>
 
+  <!-- Blade of the Eternal Tempest -->
+  <element name="Blade of the Eternal Tempest"
+           type="Magic Item"
+           source="Homebrew"
+           id="ID_HOMEBREW_WEAPON_BLADE_ETERNAL_TEMPEST">
+
+    <description>
+      <![CDATA[
+      <p><strong>Weapon (longsword), Legendary (requires attunement)</strong></p>
+      <p>Forged from the very essence of a raging storm, this longsword crackles with arcs of lightning. The blade hums with tempest energy, glowing with a calm blue radiance.</p>
+
+      <p><strong>Storm Fury.</strong> This weapon grants a +3 bonus to attack and damage rolls. On a hit, it deals an additional 3d8 lightning damage.</p>
+
+      <p>While attuned, you gain resistance to lightning and thunder damage.</p>
+
+      <p><strong>Call the Tempest (1/Long Rest).</strong> You can cast <em>Call Lightning</em> at 9th level without expending a spell slot.</p>
+
+      <p><strong>Attunement Ritual.</strong> To attune, the wielder must endure a lightning strike during a storm and succeed on a DC 18 Constitution saving throw. Upon success, the blade binds to its wielder.</p>
+      ]]>
+    </description>
+
+    <setters>
+      <set name="category">Weapon</set>
+      <set name="weapon">Longsword</set>
+      <set name="rarity">Legendary</set>
+      <set name="requiresAttunement">true</set>
+    </setters>
+
+    <rules>
+      <!-- +3 bonus -->
+      <grant type="Bonus" attack="3" damage="3" />
+
+      <!-- Extra 3d8 Lightning Damage -->
+      <grant type="Damage" dice="3d8" damageType="Lightning" />
+
+      <!-- Resistances -->
+      <grant type="Resistance" damage="Lightning" />
+      <grant type="Resistance" damage="Thunder" />
+
+      <!-- Call Lightning at 9th level, 1/Long Rest -->
+      <grant type="Spell" name="Call Lightning" level="9" uses="1" recharge="Long Rest" />
+    </rules>
+
+  </element>
+</elements>
