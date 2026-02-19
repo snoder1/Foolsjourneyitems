@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <name>My Homebrew Content</Snoder1>
+    <update version="1.0">
+      <file name="blade-eternal-tempest.xml"
+            url="https://raw.githubusercontent.com/YOURUSERNAME/aurora-homebrew/main/blade-eternal-tempest.xml" />
+    </update>
+  </info>
+</elements>
